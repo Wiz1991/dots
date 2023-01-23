@@ -16,7 +16,7 @@ font pango:JetBrains Mono Medium 10
 title_align center
 
 # Uncomment this to enable title bars
-#for_window [class=".*"] border normal 4
+# for_window [class=".*"] border normal 4
 
 # Uncomment this to disable title bars
 for_window [class=".*"] border pixel 2
@@ -73,8 +73,6 @@ bindsym $mod+r 					exec --no-startup-id ~/.config/i3/rofi/bin/asroot
 bindsym $mod+w 					exec --no-startup-id ~/.config/i3/rofi/bin/windows
 
 # -- Function keys --
-bindsym XF86MonBrightnessUp 	exec --no-startup-id "brightness --inc"
-bindsym XF86MonBrightnessDown 	exec --no-startup-id "brightness --dec"
 bindsym XF86AudioRaiseVolume 	exec --no-startup-id "volume --inc"
 bindsym XF86AudioLowerVolume 	exec --no-startup-id "volume --dec"
 bindsym XF86AudioMute 			exec --no-startup-id "volume --toggle"
@@ -167,6 +165,20 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+workspace $ws1 output DP-1
+workspace $ws2 output DP-1
+workspace $ws3 output DP-1
+workspace $ws4 output DP-1
+
+workspace $ws5 output HDMI-0
+workspace $ws6 output HDMI-0
+workspace $ws7 output HDMI-0
+workspace $ws8 output HDMI-0
+workspace $ws9 output HDMI-0
+workspace $ws10 output HDMI-0
+
+
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -272,8 +284,23 @@ mode "$mode_gaps" {
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 ##-- Workspace Rules ------------------------
-assign [class="Lxappearance|Nitrogen"] 6
-assign [class="Pavucontrol|Xfce4-power-manager-settings"] 6
+assign [class="Code"] $ws1
+assign [class="jetbrains-rider"] $ws1
+assign [class="beekeeper-studio"] $ws2
+assign [class="Lxappearance"] $ws3
+assign [class="Nitrogen"] $ws3
+assign [class="pavucontrol-qt"] $ws3
+assign [class="Xfce4-power-manager-settings"] $ws3
+assign [class="Google-chrome"] $ws5
+assign [class="xfce4-terminal"] $ws6
+assign [class="Slack"] $ws7
+assign [class="Signal"] $ws7
+assign [class="Signal-tray"] $ws7
+assign [class="discord"] $ws7
+assign [class="figma-linux"] $ws8
+assign [class="Spotify|spotify"] $ws9
+assign [class="obsidian"] $ws10
+
 
 ##-- Window Rules ------------------------
 for_window [window_role="pop-up"] floating enable
@@ -285,3 +312,4 @@ for_window [class="Pavucontrol|Xfce4-power-manager-settings|Nm-connection-editor
 for_window [class="feh|Viewnior|Gpicview|Gimp|MPlayer"] floating enable
 for_window [class="Kvantum Manager|qt5ct"] floating enable
 for_window [class="VirtualBox Manager|qemu|Qemu-system-x86_64"] floating enable
+

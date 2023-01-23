@@ -34,7 +34,7 @@ include-file = ~/.config/i3/polybar/decor
 ; If unspecified, the application will pick the first one it finds.
 ; $ polybar -m | cut -d ':' -f 1
 ; $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = HDMI-0
+monitor = DP-1 
 
 ; Use the specified monitor as a fallback if the main one is not found.
 monitor-fallback =
@@ -137,9 +137,9 @@ font-4 = "archcraft:size=14;4"
 ;   modules-right = ipc clock
 
 # Default
-modules-left = menu dot LD i3 RD  
-modules-center = 
-modules-right = volume dot ethernet dot cpu dot memory dot LD date RD dot sysmenu
+modules-left = menu dot LD i3 RD spotify previous playpause next
+modules-center = title
+modules-right = pulseaudio-control-output dot cpu dot memory dot LD date RD dot sysmenu
 
 # Alternate
 ;modules-left = openbox 2LD cpu 3LD memory 4LD filesystem 5LD
@@ -261,7 +261,7 @@ cursor-scroll =
 [bar/secondary]
 inherit = bar/main
 
-monitor = HDMI-1
+monitor = HDMI-0
 
 modules-left = i3
 modules-center =

@@ -18,15 +18,17 @@ xsetroot -cursor_name left_ptr
 # Polkit agent
 /usr/lib/xfce-polkit/xfce-polkit &
 
-# Enable power management
-xfce4-power-manager &
-
 # Enable Super Keys For Menu
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # Restore wallpaper
 hsetroot -root -cover ~/.config/i3/wallpapers/default.png
+
+nitrogen --restore
+
+exec --no-startup-id discord
+exec --no-startup-id spotify
 
 # Lauch notification daemon
 ~/.config/i3/bin/i3dunst.sh
@@ -37,5 +39,4 @@ hsetroot -root -cover ~/.config/i3/wallpapers/default.png
 # Lauch compositor
 ~/.config/i3/bin/i3comp.sh
 
-# Start mpd
-exec mpd &
+
