@@ -30,6 +30,7 @@ nitrogen --restore
 exec --no-startup-id discord
 exec --no-startup-id spotify
 
+~/.screenlayout/dual.sh
 # Lauch notification daemon
 ~/.config/i3/bin/i3dunst.sh
 

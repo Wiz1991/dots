@@ -133,6 +133,8 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+bindsym $mod+Control+f fullscreen toggle global 
+
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+z layout stacking
@@ -312,4 +314,3 @@ for_window [class="Pavucontrol|Xfce4-power-manager-settings|Nm-connection-editor
 for_window [class="feh|Viewnior|Gpicview|Gimp|MPlayer"] floating enable
 for_window [class="Kvantum Manager|qt5ct"] floating enable
 for_window [class="VirtualBox Manager|qemu|Qemu-system-x86_64"] floating enable
-
