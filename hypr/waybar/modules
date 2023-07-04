@@ -82,7 +82,7 @@
     },
     "bluetooth#2": {
         //"controller": "controller1",
-        //"format-device-preference": "",
+        "format-device-preference": ["WH-1000XM4","MX Master 3"],
         "format": "{status}",
         "format-on": "{status}",
         "format-off": "{status}",
@@ -223,7 +223,7 @@
         "scroll-step": 5.0,
 		// Commands to execute on events
         "on-click": "pulsemixer --toggle-mute",
-        "on-click-right": "pulsemixer --toggle-mute",
+        "on-click-right": "~/.config/hypr/scripts/sinks",
         "smooth-scrolling-threshold": 1,
     },
     "pulseaudio#2": {
@@ -236,7 +236,7 @@
         "scroll-step": 5.0,
 		// Commands to execute on events
         "on-click": "pulsemixer --toggle-mute",
-        "on-click-right": "pulsemixer --toggle-mute",
+        "on-click-right": "~/.config/hypr/scripts/sinks",
         "smooth-scrolling-threshold": 1,
     },
 
@@ -247,7 +247,7 @@
              "activated": "",
              "deactivated": ""
          },
-         "timeout": 30
+         "timeout": 30,
     },
 
 	// waybar-wlr-workspaces
@@ -277,5 +277,15 @@
     "tray": {
         "icon-size": 16,
         "spacing": 10
+    },
+    "wlr/taskbar" : {
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "all-outputs": true,
+        "icon-size": 14
+    },
+    "hyprland/window": {
+        "separate-outputs": true,
+        "format": "{}"
     }
 }
